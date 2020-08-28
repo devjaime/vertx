@@ -1,8 +1,12 @@
 package com.walmart.demo;
 
+import org.jgroups.util.UUID;
+
 import io.vertx.core.AbstractVerticle;
 
 public class HelloVerticle extends AbstractVerticle{
+    String verticleId = UUID.randomUUID().toString();
+
     @Override
     public void start(){
         vertx.eventBus().consumer("hello.vertx.addr", msg -> {
@@ -11,7 +15,7 @@ public class HelloVerticle extends AbstractVerticle{
 
         vertx.eventBus().consumer("hello.named.addr", msg -> {
             String name = (String)msg.body();
-            msg.reply(String.format("Hello %s!", name));
+            msg.reply(String.format("Hello %s, from %s!", name, verticleId));
         });
     }
 }
