@@ -1,3 +1,3 @@
 # Introducción a Vert.X
 
-# 2.- router
+# 3.- EventBus
