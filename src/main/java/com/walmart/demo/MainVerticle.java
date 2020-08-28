@@ -1,16 +1,21 @@
 package com.walmart.demo;
 
 import io.vertx.core.AbstractVerticle;
+import io.vertx.ext.web.Router;
 
 public class MainVerticle extends AbstractVerticle {
 
     @Override
     public void start() {
-        //La interfaz RequestHandler es un tipo genérico que toma dos parámetros: el tipo de entrada y el tipo de salida. Los dos tipos deben ser objetos. Cuando se utiliza esta interfaz, el entorno de ejecución de Java deserializa el evento en un objeto con el tipo de entrada y serializa la salida en texto.
-        // funcion lambda
-        vertx.createHttpServer().requestHandler(req ->{
-            req.response().end("Hello Vert.x World!");
-        }).listen(8080); // escucha en el puerto
+        Router router = Router.router(vertx);
+        router.get("/api/v1/hello").handler(ctx -> {
+            ctx.request().response().end("Hello Vert.x World!");
+        });
+        router.get("/api/v1/hello/:name").handler(ctx -> {
+            String name = ctx.pathParam("name");
+            ctx.request().response().end(String.format("Hello %s!", name));
+        });
+        vertx.createHttpServer().requestHandler(router).listen(8080);
     }
 
 }
