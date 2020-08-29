@@ -1,6 +1,8 @@
 # Introducción a Vert.X
 
-# 5.- Infinispan Cluster Manager
+# 6.- router static handlers
 
-* 1.- limpie el proyecto mvn clean package
-* 2.- ejecute multiples instancia en distintos puertos java -jar target/vertx-demo-1.0.0-SNAPSHOT.jar -cluster -Djava.net.preferIPv4Stack=true -Dhttp.port=8070
+* Solicitar acceso
+* curl -H "AUTH_TOKEN: mySuperSecretAuthToken" http://localhost:8080/  
+
+* probar UNAUTHORIZED curl -vv http://localhost:8080/api/v1/hello  
