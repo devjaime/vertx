@@ -1,4 +1,4 @@
-package com.walmart.demo;
+package com.dev.demo;
 
 import io.vertx.config.ConfigRetriever;
 import io.vertx.config.ConfigRetrieverOptions;

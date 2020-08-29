@@ -1,4 +1,4 @@
-package com.walmart.demo;
+package com.dev.demo;
 
 import java.util.UUID;
 
