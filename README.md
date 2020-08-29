@@ -1,7 +1,6 @@
 # Introducción a Vert.X
 
-# 6.- router static handlers
-
+# 7.- polyglot
 * Solicitar acceso
 * curl -H "AUTH_TOKEN: mySuperSecretAuthToken" http://localhost:8080/  
 
