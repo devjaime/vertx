@@ -1,9 +1,78 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Hello Static Content</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Poleras.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-    <h1>Hello Vert.x Static Content</h1>
+
+    <header class="hero">
+        <div class="container spacing">
+            <h1 class="primary-title">Umbrella Poleras & Estampados</h1>
+            <p>Un nuevo concepto de poleras y estampados!</p>
+            <a href="#" class="btn">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Productos destactados</h2>
+                <div class="split">
+                    <a href="#" class="featured__item">
+                        <img src="img/polera1.png" alt="" class="featured__img">
+                        <p class="featured__details"><span class="price">$9.990 CLP</span>Polera</p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img src="img/polera2.png" alt="" class="featured__img">
+                        <p class="featured__details"><span class="price">$9.990 CLP</span>Polera</p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img src="img/polera3.png" alt="" class="featured__img">
+                        <p class="featured__details"><span class="price">$9.990 CLP</span>Polera</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="our-products">
+            <div class="container">
+                <h2 class="section-title">Nuestros productos</h2>
+
+                <article class="product shoe-red spacing">
+                    <img src="img/polera4.png" alt="" class="product__image">
+                    <h3 class="product__title">Un concepto diferente</h3>
+                    <p class="product__description">Una experiencia que liberara tu mente y tus sentidos!</p>
+                    <a href="" class="btn">Comprar</a>
+                </article>
+
+                <article class="product shoe-white shoe-left spacing">
+                    <img src="img/polera2.png" alt="" class="product__image">
+                    <h3 class="product__title">Unete al viaje</h3>
+                    <p class="product__description">Cada detalle nos importa y cada concepto puede ser personalizado a tu gusto!</p>
+                    <a href="" class="btn">Comrpar</a>
+                </article>
+
+                <article class="product shoe-blue spacing">
+                    <img src="img/polera3.png" alt="" class="product__image">
+                    <h3 class="product__title">Una realidad para tus sentidos</h3>
+                    <p class="product__description">La calidad siempre sera un factor en todo lo que realizamos!</p>
+                    <a href="" class="btn">Comprar</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
 </body>
+
+</html>
